@@ -25,6 +25,7 @@
   <Example goes here. Repeat this attribute for more than one example>
 #>
 
+function Install-NetFx3 {
 Param(
 [Parameter(Mandatory=$true)]
 [ValidateSet("Install", "Uninstall")]
@@ -56,3 +57,7 @@ If ($Mode -eq "Uninstall")
 Disable-WindowsOptionalFeature -Online -FeatureName 'NetFx3' -Remove -NoRestart
  
 }
+
+}
+
+Install-NetFx3 -Mode Install

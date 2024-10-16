@@ -36,6 +36,7 @@ $subfolders = @(
     'Logs'
 	'Winget'
 	'Choco'
+	'O365'
 )
 
 foreach ($root in $rootfolders) {

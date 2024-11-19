@@ -45,3 +45,14 @@ Unregister-ScheduledTask -TaskName "Launch OneDrive" -Confirm:$false
 
 
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" -Name OneDrive -PropertyType String -Value '"C:\Program Files\Microsoft OneDrive\OneDrive.exe" /background' -Force
+
+# Define the registry path
+$registryPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services"
+
+# Create the registry key if it doesn't exist
+If (-Not (Test-Path $registryPath)) {
+    New-Item -Path $registryPath -Force
+}
+
+# Create the DWORD value and set it to 1
+New-ItemProperty -Path $registryPath -Name "UseShellAppRuntimeRemoteApp" -PropertyType DWORD -Value 1 -Force

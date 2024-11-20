@@ -36,7 +36,7 @@
  
 #>
 
-function install-O365x32 {
+function install-O365x64 {
 
 [CmdletBinding(DefaultParameterSetName = 'XMLFile')]
 Param(
@@ -296,4 +296,4 @@ if ($CleanUpInstallFiles) {
 
 }
 
-install-O365x32 -AcceptEULA TRUE -Channel MonthlyEnterprise -OfficeArch 32 -LanguageIDs en-US,nl-NL,fr-FR,de-De,it-IT,pt-PT,es-ES -ExcludeApps groove,lync,onedrive,onenote,publisher,teams -PinItemsToTaskbar FALSE -CleanUpInstallFiles -SharedComputerLicensing 1
+install-O365x64 -AcceptEULA TRUE -Channel MonthlyEnterprise -OfficeArch 64 -IncludeProject -IncludeVisio -LanguageIDs en-US,nl-NL,fr-FR,de-De,it-IT,pt-PT,es-ES -ExcludeApps groove,lync,onedrive,onenote,publisher,teams -PinItemsToTaskbar FALSE -CleanUpInstallFiles -SharedComputerLicensing 1

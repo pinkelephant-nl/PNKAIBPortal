@@ -172,17 +172,17 @@ function Get-XMLFile {
   
 }
 
-function Get-ODTURL {
+#function Get-ODTURL {
+#
+#  [String]$MSWebPage = Invoke-RestMethod 'https://www.microsoft.com/en-us/download/confirmation.aspx?id=49117'
+#
+#  $MSWebPage | ForEach-Object {
+#    if ($_ -match 'url=(https://.*officedeploymenttool.*\.exe)') {
+#      $matches[1]
+#    }
+#  }
 
-  [String]$MSWebPage = Invoke-RestMethod 'https://www.microsoft.com/en-us/download/confirmation.aspx?id=49117'
-
-  $MSWebPage | ForEach-Object {
-    if ($_ -match 'url=(https://.*officedeploymenttool.*\.exe)') {
-      $matches[1]
-    }
-  }
-
-}
+#}
 
 if (-Not(Test-Path $OfficeInstallDownloadPath )) {
   New-Item -Path $OfficeInstallDownloadPath -ItemType Directory | Out-Null
@@ -236,7 +236,7 @@ else {
 
 }
 
-$ODTInstallLink = Get-ODTURL
+$ODTInstallLink = "https://download.microsoft.com/download/2/7/A/27AF1BE6-DD20-4CB4-B154-EBAB8A7D4A7E/officedeploymenttool_18129-20030.exe"
 
 #Download the Office Deployment Tool
 Write-Verbose 'Downloading the Office Deployment Tool...'

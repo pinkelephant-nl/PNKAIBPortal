@@ -298,4 +298,4 @@ if ($CleanUpInstallFiles) {
 
 }
 
-install-O365x64 -AcceptEULA TRUE -Channel MonthlyEnterprise -OfficeArch 64 -LanguageIDs en-US,nl-NL,fr-FR,de-De,it-IT,pt-PT,es-ES -ExcludeApps groove,lync,onedrive,onenote,publisher,teams -PinItemsToTaskbar FALSE -CleanUpInstallFiles -SharedComputerLicensing 1
+install-O365x64 -AcceptEULA TRUE -Channel MonthlyEnterprise -OfficeArch 64 -LanguageIDs en-US,nl-NL,fr-FR,de-De,it-IT,pt-PT,es-ES,pl-pl -ExcludeApps groove,lync,onedrive,onenote,publisher,teams -PinItemsToTaskbar FALSE -CleanUpInstallFiles -SharedComputerLicensing 1

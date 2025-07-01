@@ -593,4 +593,4 @@ Start-Sleep 3
 
 }
 
-winget-install -AppIDs PDFLabs.PDFtk.Freet -LogPath "$env:ProgramData\POSD\logs" -Verbose
+winget-install -AppIDs PDFLabs.PDFtk.Free -LogPath "$env:ProgramData\POSD\logs" -Verbose

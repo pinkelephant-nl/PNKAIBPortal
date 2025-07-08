@@ -593,4 +593,4 @@ Start-Sleep 3
 
 }
 
-winget-install -AppIDs "dbeaver.dbeaver" -LogPath "$env:ProgramData\POSD\logs" -Verbose
+winget-install -AppIDs "DBeaver.DBeaver.Community" -LogPath "$env:ProgramData\POSD\logs" -Verbose

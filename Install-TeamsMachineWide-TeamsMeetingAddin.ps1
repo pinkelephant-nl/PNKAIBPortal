@@ -29,8 +29,7 @@
 #>
 
 $ErrorActionPreference = "Stop"
-$TempDir = "C:\Temp"
-New-Item -ItemType Directory -Path $TempDir -Force | Out-Null
+$TempDir = $env:TEMP
 
 # 1. Teams AVD optimization registry key
 Write-Host "[-] Setting IsWVDEnvironment registry key..." -ForegroundColor Cyan
